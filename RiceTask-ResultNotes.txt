@@ -1,0 +1,180 @@
+
+10K-train, 1k-test, MTR, Property NumRotatableBonds
+result: [0, 3, 3]
+
+training_args = TrainingArguments(
+    output_dir="./results",
+    num_train_epochs=3,
+    per_device_train_batch_size=8,
+    evaluation_strategy="epoch",
+    save_strategy="epoch",
+    learning_rate=2e-5,
+    weight_decay=0.01
+)
+
+Epoch	Training Loss	Validation Loss
+1	1.225700	1.058160
+2	0.814000	0.845350
+3	0.704500	0.778653
+
+==============================================
+
+100K-train, 10k-test, MTR, Property NumRotatableBonds
+result: [70, 73, 64]
+
+Epoch	Training Loss	Validation Loss
+1	1.236600	2.237961
+2	1.044600	2.080744
+3	1.000800	2.037059
+
+==============================================
+
+10K-train, 1k-test, MLM, Property NumRotatableBonds
+result: [2, 2, 2]
+
+
+Epoch	Training Loss	Validation Loss
+1	1.496000	1.041447
+2	0.664800	0.695206
+3	0.526400	0.587485
+
+==============================================
+
+100K-train, 10k-test, MLM, Property NumRotatableBonds
+result: [0, 1, 0]
+
+==============================================
+
+10K-train, 1k-test, MTR, Property NumRotatableBonds, Shuffled by seed = 2023
+result: [1, 2, 4]
+
+Epoch	Training Loss	Validation Loss
+1	-	-
+2	-	-
+3	1.699496	-
+
+==============================================
+
+
+10K-train, 1k-test, MTR, Property NumRotatableBonds, Removed other properties
+result: [13, 3, 3]
+
+Epoch	Training Loss	Validation Loss
+1	-	-
+2	-	-
+3	1.070765	-
+
+==============================================
+
+100K-train, 10k-test, MTR, Property NumRotatableBonds, Removed other properties, Shuffled by seed = 2023
+result: [6, 3, 14]
+
+Epoch	Training Loss	Validation Loss
+1	-	-
+2	-	-
+3	0.992016	-
+
+==============================================
+
+100K-train, 10k-test, MTR, Property NumRotatableBonds, Removed other properties, Shuffled by seed = 2023
+result: [43, 43, 43]
+
+training_args = TrainingArguments(
+    output_dir="./results",
+    num_train_epochs=6,
+    per_device_train_batch_size=8,
+    evaluation_strategy="epoch",
+    save_strategy="epoch",
+    learning_rate=2e-5,
+    weight_decay=0.01
+)
+
+Epoch	Training Loss	Validation Loss
+1	-	-
+2	-	-
+3	-	-
+4	-	-
+5	-	-
+6	1.0117801647949218	-
+
+==============================================
+
+100K-train, 10k-test, MTR, Property NumRotatableBonds, Removed other properties, Shuffled by seed = 2023
+result: [3, 3, 4]
+
+training_args = TrainingArguments(
+    output_dir="./results",
+    num_train_epochs=10,
+    per_device_train_batch_size=64,  # Adjusted batch size
+    evaluation_strategy="epoch",
+    save_strategy="epoch",
+    load_best_model_at_end = True,
+    learning_rate=1e-5,  # adjusted learning rate
+    weight_decay=0.01,  # ajusted weight decay
+    lr_scheduler_type="linear"  # adjusted learning rate scheduler type
+)
+
+Epoch	Training Loss	Validation Loss
+1	-	-
+2	-	-
+3	-	-
+4	-	-
+5	-	-
+6	1.2781564814623905	-
+
+==============================================
+
+100K-train, 10k-test, MTR, Property NumRotatableBonds, Removed other properties, Shuffled by seed = 2023
+result: [73, 63, 40]
+
+training_args = TrainingArguments(
+    output_dir="./results",
+    num_train_epochs=30,
+    per_device_train_batch_size=64,  # Adjusted batch size
+    evaluation_strategy="epoch",
+    save_strategy="epoch",
+    load_best_model_at_end = True,
+    learning_rate=4e-5,  # adjusted learning rate
+    weight_decay=0.01,  # ajusted weight decay
+    lr_scheduler_type="linear"  # adjusted learning rate scheduler type
+)
+
+Epoch	Training Loss	Validation Loss
+1	-	-
+2	-	-
+3	-	-
+4	-	-
+5	-	-
+6	-	-
+7	1.0798807690690764	-
+
+==============================================
+
+Ring Count
+
+==============================================
+
+100K-train, 10k-test, MTR, Property RingCount, Removed other properties, Shuffled by seed = 2023
+result: [7, 7, 3]
+
+training_args = TrainingArguments(
+    output_dir="./results",
+    num_train_epochs=10,
+    per_device_train_batch_size=64,  # Adjusted batch size
+    evaluation_strategy="epoch",
+    save_strategy="epoch",
+    load_best_model_at_end = True,
+    learning_rate=1e-5,  # adjusted learning rate
+    weight_decay=0.01,  # ajusted weight decay
+    lr_scheduler_type="linear"  # adjusted learning rate scheduler type
+)
+
+Epoch	Training Loss	Validation Loss
+1	-	-
+2	-	-
+3	-	-
+4	-	-
+5	-	-
+6	0.6091446090441163	-
+
+==============================================
